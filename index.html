@@ -187,7 +187,7 @@
             <div class="finder__q">
               <div class="finder__label">Momento</div>
               <div class="seg" role="group" aria-label="Scegli ambiente">
-                <button class="seg__btn is-active" type="button" data-f-space="home" aria-pressed="true">Casa</button>
+                <button class="seg__btn is-active" type="button" data-f-space="home" aria-pressed="true">Giorno</button>
                 <button class="seg__btn" type="button" data-f-space="night" aria-pressed="false">Sera</button>
               </div>
             </div>
@@ -221,13 +221,13 @@
       </div>
     </section>
 
-    <section class="section" id="story">
-      <div class="container story">
-        <div class="story__card" data-reveal>
-          <h2 class="section__title">Made in Italy</h2>
-          <p class="section__sub">
-            SmokyCandle nasce in Italia: cera di soia, colata a mano e una sola ossessione — un profumo pulito e riconoscibile. Pochi elementi, lavorati bene.
-          </p>
+	    <section class="section" id="story">
+	      <div class="container story">
+	        <div class="story__card" data-reveal>
+	          <h2 class="section__title">Made in Italy</h2>
+	          <p class="section__sub">
+	            SmokyCandle nasce in Italia: cera di soia, colata a mano e una sola ossessione — un profumo pulito e riconoscibile. Pochi elementi, lavorati bene.
+	          </p>
 
           <div class="story__grid">
             <div class="story__item">
@@ -244,20 +244,13 @@
             </div>
           </div>
 
-          <div class="story__cta">
-            <button class="btn btn--primary" type="button" data-scrollto="shop">Vai allo shop</button>
-            <button class="btn btn--ghost" type="button" data-open-guide>Guida all’uso</button>
-          </div>
-        </div>
-
-        <div class="story__aside" aria-hidden="true" data-reveal>
-          <div class="material-slab">
-            <div class="material-slab__top"></div>
-            <div class="material-slab__label">Texture: clay / slate / ash</div>
-          </div>
-        </div>
-      </div>
-    </section>
+	          <div class="story__cta">
+	            <button class="btn btn--primary" type="button" data-scrollto="shop">Vai allo shop</button>
+	            <button class="btn btn--ghost" type="button" data-open-guide>Guida all’uso</button>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
 
     <section class="section" id="reviews">
       <div class="container">
@@ -457,44 +450,49 @@
               <div class="spec"><div class="spec__k">Note</div><div class="spec__v" data-p-notes>—</div></div>
             </div>
 
-            <div class="pdp__buy">
-              <div class="pdp__price" data-p-price>€0</div>
-              <div class="pdp__qty">
-                <button class="qty-btn" type="button" aria-label="Diminuisci quantità" data-p-qty-dec>−</button>
-                <input class="qty-input" type="number" inputmode="numeric" min="1" value="1" aria-label="Quantità" data-p-qty />
-                <button class="qty-btn" type="button" aria-label="Aumenta quantità" data-p-qty-inc>+</button>
-              </div>
-              <button class="btn btn--primary pdp__add" type="button" data-p-add>Aggiungi al carrello</button>
-            </div>
+	            <div class="pdp__buy">
+	              <div class="pdp__price" data-p-price>€0</div>
+	              <div class="pdp__qty" role="group" aria-label="Quantità">
+	                <button class="qty-btn" type="button" aria-label="Diminuisci quantità" aria-controls="pdpQty" data-p-qty-dec>−</button>
+	                <input class="qty-input" id="pdpQty" type="number" inputmode="numeric" min="1" max="99" step="1" value="1" aria-label="Quantità" data-p-qty />
+	                <button class="qty-btn" type="button" aria-label="Aumenta quantità" aria-controls="pdpQty" data-p-qty-inc>+</button>
+	              </div>
+	              <button class="btn btn--primary pdp__add" type="button" data-p-add>Aggiungi al carrello</button>
+	            </div>
 
-            <div class="pdp__fine">
-              <span class="dot"></span>
-              <span>Finiture curate — etichetta opaca, vetro satinato</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
   </div>
 
   <div class="modal" role="dialog" aria-modal="true" aria-label="Riepilogo ordine" data-checkout-modal hidden>
-    <div class="modal__card modal__card--checkout" role="document">
-      <div class="modal__head">
-        <div class="modal__title">Riepilogo ordine</div>
-        <button class="icon-btn" type="button" aria-label="Chiudi riepilogo ordine" data-checkout-close>
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </span>
-        </button>
-      </div>
+	    <div class="modal__card modal__card--checkout" role="document">
+	      <div class="modal__head modal__head--checkout">
+	        <div class="modal__title modal__title--checkout">
+	          <div class="modal__title-main">Riepilogo ordine</div>
+	          <div class="modal__title-sub">Checkout essenziale (demo) — nessun addebito reale</div>
+	        </div>
+	        <button class="icon-btn" type="button" aria-label="Chiudi riepilogo ordine" data-checkout-close>
+	          <span class="icon" aria-hidden="true">
+	            <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+	          </span>
+	        </button>
+	      </div>
 
-      <div class="modal__body">
-        <div class="checkout">
-          <form class="checkout__form" data-checkout-form>
-            <div class="form__section">
-              <h3 class="form__title">Contatti</h3>
-              <div class="field">
-                <label for="email">Email</label>
+	      <div class="modal__body">
+	        <div class="checkout__meta" aria-label="Info checkout">
+	          <div class="checkout-pill">Spedizione 2–4 giorni</div>
+	          <div class="checkout-pill checkout-pill--secure">Pagamento sicuro</div>
+	          <div class="checkout-pill checkout-pill--demo">Demo</div>
+	        </div>
+
+	        <div class="checkout">
+	          <form class="checkout__form" data-checkout-form>
+	            <div class="form__section">
+	              <h3 class="form__title">Contatti</h3>
+	              <div class="field">
+	                <label for="email">Email</label>
                 <input id="email" name="email" type="email" autocomplete="email" required placeholder="email@esempio.com" />
               </div>
             </div>
@@ -540,27 +538,33 @@
               </label>
             </div>
 
-            <button class="btn btn--primary btn--full" type="submit">Completa ordine</button>
-            <p class="small-muted">Demo: non verrà effettuato alcun addebito.</p>
-          </form>
+	            <button class="btn btn--primary btn--full" type="submit">Completa ordine</button>
+	            <p class="small-muted">Pagamento in demo: i dati non vengono inviati e non verrà effettuato alcun addebito.</p>
+	          </form>
 
-          <aside class="checkout__summary" aria-live="polite">
-            <div class="summary-card">
-              <div class="summary-card__title">Riepilogo</div>
-              <div class="summary-lines" data-checkout-lines></div>
+	          <aside class="checkout__summary" aria-live="polite">
+	            <div class="summary-card">
+	              <div class="summary-card__head">
+	                <div>
+	                  <div class="summary-card__title">Riepilogo</div>
+	                  <div class="summary-card__sub">Rivedi articoli e totale prima di confermare.</div>
+	                </div>
+	                <div class="summary-card__badge">Secure</div>
+	              </div>
+	              <div class="summary-lines" data-checkout-lines></div>
 
-              <div class="summary-totals">
-                <div class="row"><span>Subtotale</span><span data-co-subtotal>€0</span></div>
-                <div class="row"><span>Spedizione</span><span data-co-shipping>€0</span></div>
-                <div class="row"><span>IVA (stima)</span><span data-co-tax>€0</span></div>
-                <div class="row row--total"><span>Totale</span><span data-co-total>€0</span></div>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </div>
-  </div>
+	              <div class="summary-totals">
+	                <div class="row"><span>Subtotale</span><span data-co-subtotal>€0</span></div>
+	                <div class="row"><span>Spedizione</span><span data-co-shipping>€0</span></div>
+	                <div class="row"><span>IVA (stima)</span><span data-co-tax>€0</span></div>
+	                <div class="row row--total"><span>Totale</span><span data-co-total>€0</span></div>
+	              </div>
+	            </div>
+	          </aside>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 
   <div class="modal" role="dialog" aria-modal="true" aria-label="Guida all’uso" data-guide-modal hidden>
     <div class="modal__card" role="document">

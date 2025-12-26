@@ -736,6 +736,8 @@
   function setPdpQty(v) {
     v = clamp(Number(v) || 1, 1, 99);
     if (els.pQty) els.pQty.value = String(v);
+    if (els.pQtyDec) els.pQtyDec.disabled = v <= 1;
+    if (els.pQtyInc) els.pQtyInc.disabled = v >= 99;
   }
 
   /* =========================
