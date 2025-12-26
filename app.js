@@ -1078,7 +1078,7 @@
 	    const mqReduce = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
 	    let timer = 0;
 
-	    const getIntervalMs = () => (mqReduce && mqReduce.matches ? 6500 : 3800);
+	    const getIntervalMs = () => (mqReduce && mqReduce.matches ? 4500 : 2600);
 
 	    const setActive = (nextIdx) => {
 	      slides.forEach((s, i) => s.classList.toggle("is-active", i === nextIdx));
