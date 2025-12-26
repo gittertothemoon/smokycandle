@@ -3,11 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="dark light" />
-  <title>SmokyCandle — Candele di soia artigianali Made in Italy</title>
-  <meta name="description" content="SmokyCandle: candele profumate in cera di soia, colate a mano in Italia. Due fragranze signature: Butter e Berry." />
-  <link rel="stylesheet" href="styles.css" />
-</head>
+	  <meta name="color-scheme" content="dark light" />
+	  <title>SmokyCandle — Candele di soia artigianali Made in Italy</title>
+	  <meta name="description" content="SmokyCandle: candele profumate in cera di soia, colate a mano in Italia. Due fragranze signature: Butter e Berry." />
+	  <link rel="stylesheet" href="styles.css" />
+	  <link rel="preload" as="image"
+	    href="src/public/hero_1-1600.webp"
+	    imagesrcset="src/public/hero_1-960.webp 960w, src/public/hero_1-1600.webp 1600w, src/public/hero_1-2400.webp 2400w"
+	    imagesizes="100vw" />
+	</head>
 
 <body>
   <a class="skip-link" href="#main">Salta al contenuto</a>
@@ -93,31 +97,66 @@
 
 
   <main id="main">
-	    <section class="hero hero--bg" id="top">
-	      <div class="hero-bg" data-hero aria-hidden="true">
-	        <div class="hero-bg__slide is-active" data-hero-slide>
-	          <img class="hero-bg__img" data-asset="hero_1" alt="">
-	        </div>
-	        <div class="hero-bg__slide" data-hero-slide>
-	          <img class="hero-bg__img" data-asset="hero_2" alt="">
-	        </div>
-	        <div class="hero-bg__slide" data-hero-slide>
-	          <img class="hero-bg__img" data-asset="hero_3" alt="">
-	        </div>
-	        <div class="hero-bg__slide" data-hero-slide>
-	          <img class="hero-bg__img" data-asset="hero_4" alt="">
-	        </div>
-	        <div class="hero-bg__slide" data-hero-slide>
-	          <img class="hero-bg__img" data-asset="hero_5" alt="">
-	        </div>
-	        <div class="hero-bg__slide" data-hero-slide>
-	          <img class="hero-bg__img" data-asset="hero_6" alt="">
-	        </div>
-	        <div class="hero-bg__slide" data-hero-slide>
-	          <img class="hero-bg__img" data-asset="hero_7" alt="">
-	        </div>
-	        <div class="hero-bg__overlay" aria-hidden="true"></div>
-	      </div>
+		    <section class="hero hero--bg" id="top">
+		      <div class="hero-bg" data-hero aria-hidden="true">
+		        <div class="hero-bg__slide is-active" data-hero-slide>
+		          <picture class="hero-bg__picture">
+		            <source type="image/webp"
+		              srcset="src/public/hero_1-960.webp 960w, src/public/hero_1-1600.webp 1600w, src/public/hero_1-2400.webp 2400w"
+		              sizes="100vw" />
+		            <img class="hero-bg__img" src="src/public/hero_1.png" width="3168" height="1344" alt="" decoding="async" fetchpriority="high" />
+		          </picture>
+		        </div>
+		        <div class="hero-bg__slide" data-hero-slide>
+		          <picture class="hero-bg__picture">
+		            <source type="image/webp"
+		              srcset="src/public/hero_2-960.webp 960w, src/public/hero_2-1600.webp 1600w, src/public/hero_2-2400.webp 2400w"
+		              sizes="100vw" />
+		            <img class="hero-bg__img" src="src/public/hero_2.png" width="3168" height="1344" alt="" decoding="async" loading="lazy" />
+		          </picture>
+		        </div>
+		        <div class="hero-bg__slide" data-hero-slide>
+		          <picture class="hero-bg__picture">
+		            <source type="image/webp"
+		              srcset="src/public/hero_3-960.webp 960w, src/public/hero_3-1600.webp 1600w, src/public/hero_3-2400.webp 2400w"
+		              sizes="100vw" />
+		            <img class="hero-bg__img" src="src/public/hero_3.png" width="3168" height="1344" alt="" decoding="async" loading="lazy" />
+		          </picture>
+		        </div>
+		        <div class="hero-bg__slide" data-hero-slide>
+		          <picture class="hero-bg__picture">
+		            <source type="image/webp"
+		              srcset="src/public/hero_4-960.webp 960w, src/public/hero_4-1600.webp 1600w, src/public/hero_4-2400.webp 2400w"
+		              sizes="100vw" />
+		            <img class="hero-bg__img" src="src/public/hero_4.png" width="3168" height="1344" alt="" decoding="async" loading="lazy" />
+		          </picture>
+		        </div>
+		        <div class="hero-bg__slide" data-hero-slide>
+		          <picture class="hero-bg__picture">
+		            <source type="image/webp"
+		              srcset="src/public/hero_5-960.webp 960w, src/public/hero_5-1600.webp 1600w, src/public/hero_5-2400.webp 2400w"
+		              sizes="100vw" />
+		            <img class="hero-bg__img" src="src/public/hero_5.png" width="3168" height="1344" alt="" decoding="async" loading="lazy" />
+		          </picture>
+		        </div>
+		        <div class="hero-bg__slide" data-hero-slide>
+		          <picture class="hero-bg__picture">
+		            <source type="image/webp"
+		              srcset="src/public/hero_6-960.webp 960w, src/public/hero_6-1600.webp 1600w, src/public/hero_6-2400.webp 2400w"
+		              sizes="100vw" />
+		            <img class="hero-bg__img" src="src/public/hero_6.png" width="3168" height="1344" alt="" decoding="async" loading="lazy" />
+		          </picture>
+		        </div>
+		        <div class="hero-bg__slide" data-hero-slide>
+		          <picture class="hero-bg__picture">
+		            <source type="image/webp"
+		              srcset="src/public/hero_7-960.webp 960w, src/public/hero_7-1600.webp 1600w, src/public/hero_7-2400.webp 2400w"
+		              sizes="100vw" />
+		            <img class="hero-bg__img" src="src/public/hero_7.png" width="3168" height="1344" alt="" decoding="async" loading="lazy" />
+		          </picture>
+		        </div>
+		        <div class="hero-bg__overlay" aria-hidden="true"></div>
+		      </div>
 
       <div class="container hero__content">
         <div class="hero-panel" data-reveal>
