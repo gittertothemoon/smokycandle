@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>SmokyCandle — Candele di soia artigianali Made in Italy</title>
+  <meta name="description" content="SmokyCandle: candele profumate in cera di soia, colate a mano in Italia. Due fragranze signature: Butter e Berry." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto</a>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__grain"></div>
+    <div class="ambient__glow ambient__glow--a"></div>
+    <div class="ambient__glow ambient__glow--b"></div>
+    <div class="ambient__glow ambient__glow--c"></div>
+  </div>
+
+  <div class="announce" role="status" aria-live="polite">
+    <div class="container announce__inner">
+      <span class="announce__pill">Made in Italy</span>
+      <span class="announce__text">Spedizione gratuita sopra €60 — consegna 2–4 giorni (Italia/UE)</span>
+      <button class="announce__close" type="button" aria-label="Chiudi annuncio" data-announce-close>×</button>
+    </div>
+  </div>
+
+  <header class="header" data-header>
+  <div class="container header__inner">
+    <!-- Hamburger: SOLO mobile (via CSS) -->
+    <button class="icon-btn header__menu" type="button"
+      aria-label="Apri menu" aria-expanded="false" aria-controls="mobileNav" data-mobile-open>
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </button>
+
+    <!-- BRAND: solo logo (pulito) -->
+    <a class="brand brand--mark-only" href="#top" aria-label="SmokyCandle Home">
+      <span class="brand__mark" aria-hidden="true">
+        <img class="brand__logo" data-asset="logo" alt="SmokyCandle">
+      </span>
+    </a>
+
+    <!-- NAV: desktop only (via CSS) -->
+    <nav class="nav nav--desktop" aria-label="Navigazione principale">
+      <a class="nav__link" href="#shop" data-scrollto="shop">Prodotti</a>
+      <a class="nav__link" href="#finder" data-scrollto="finder">Trova fragranza</a>
+      <a class="nav__link" href="#story" data-scrollto="story">Storia</a>
+      <a class="nav__link" href="#reviews" data-scrollto="reviews">Recensioni</a>
+      <a class="nav__link" href="#faq" data-scrollto="faq">FAQ</a>
+    </nav>
+
+	    <div class="header__actions">
+	      <button class="icon-btn" type="button" aria-label="Cambia tema" data-theme-toggle>
+	        <span class="icon" aria-hidden="true">
+	          <svg class="icon-theme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+	            <path class="icon-theme__moon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+	            <path class="icon-theme__sun" d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/>
+	            <path class="icon-theme__sun" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+	          </svg>
+	        </span>
+	      </button>
+
+	      <button class="icon-btn cart-btn" type="button" aria-label="Apri carrello" aria-haspopup="dialog" data-cart-open>
+	        <span class="icon" aria-hidden="true">
+	          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+	            <path d="M6 8h12l-1 13H7L6 8z"/>
+	            <path d="M9 8V7a3 3 0 0 1 6 0v1"/>
+	          </svg>
+	        </span>
+	        <span class="cart-badge" aria-label="Articoli nel carrello" data-cart-count>0</span>
+	      </button>
+	    </div>
+  </div>
+
+  <!-- Mobile Nav (rimane, si apre via hamburger) -->
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <div class="container mobile-nav__inner">
+      <a class="mobile-nav__link" href="#shop" data-scrollto="shop" data-mobile-close>Prodotti</a>
+      <a class="mobile-nav__link" href="#finder" data-scrollto="finder" data-mobile-close>Trova fragranza</a>
+      <a class="mobile-nav__link" href="#story" data-scrollto="story" data-mobile-close>Storia</a>
+      <a class="mobile-nav__link" href="#reviews" data-scrollto="reviews" data-mobile-close>Recensioni</a>
+      <a class="mobile-nav__link" href="#faq" data-scrollto="faq" data-mobile-close>FAQ</a>
+      <button class="btn btn--primary mobile-nav__cta" type="button" data-cart-open data-mobile-close>Apri carrello</button>
+    </div>
+  </div>
+</header>
+
+
+  <main id="main">
+	    <section class="hero hero--bg" id="top">
+	      <div class="hero-bg" data-hero aria-hidden="true">
+	        <div class="hero-bg__slide is-active" data-hero-slide>
+	          <img class="hero-bg__img" data-asset="hero_1" alt="">
+	        </div>
+	        <div class="hero-bg__slide" data-hero-slide>
+	          <img class="hero-bg__img" data-asset="hero_2" alt="">
+	        </div>
+	        <div class="hero-bg__slide" data-hero-slide>
+	          <img class="hero-bg__img" data-asset="hero_3" alt="">
+	        </div>
+	        <div class="hero-bg__slide" data-hero-slide>
+	          <img class="hero-bg__img" data-asset="hero_4" alt="">
+	        </div>
+	        <div class="hero-bg__slide" data-hero-slide>
+	          <img class="hero-bg__img" data-asset="hero_5" alt="">
+	        </div>
+	        <div class="hero-bg__slide" data-hero-slide>
+	          <img class="hero-bg__img" data-asset="hero_6" alt="">
+	        </div>
+	        <div class="hero-bg__slide" data-hero-slide>
+	          <img class="hero-bg__img" data-asset="hero_7" alt="">
+	        </div>
+	        <div class="hero-bg__overlay" aria-hidden="true"></div>
+	      </div>
+
+      <div class="container hero__content">
+        <div class="hero-panel" data-reveal>
+          <p class="kicker">Cera di soia · Colata a mano in Italia</p>
+          <h1 class="hero__title">Candele di soia artigianali. Una firma essenziale.</h1>
+          <p class="hero__lead">
+            Piccoli lotti, finiture curate e fragranze selezionate. Due interpretazioni: Butter, morbida e legnosa; Berry, scura e resinosa.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#shop" data-scrollto="shop">Scopri Butter &amp; Berry</a>
+            <button class="btn btn--soft" type="button" data-open-finder>Trova la tua fragranza</button>
+          </div>
+
+          <div class="hero__micro" aria-label="Punti chiave">
+            <div class="micro">
+              <span class="micro__k">Durata</span>
+              <span class="micro__v">circa 45 ore</span>
+            </div>
+            <div class="micro">
+              <span class="micro__k">Produzione</span>
+              <span class="micro__v">colata a mano</span>
+            </div>
+            <div class="micro">
+              <span class="micro__k">Cera</span>
+              <span class="micro__v">soia premium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="section" id="shop">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <div>
+            <h2 class="section__title">Prodotti</h2>
+            <p class="section__sub">Due fragranze signature, colate a mano in Italia. Profumi puliti, leggibili, persistenti.</p>
+          </div>
+</div>
+
+        <div class="grid products" data-products data-reveal></div>
+
+        <div class="shipping-note" role="note" data-reveal>
+          <div class="shipping-note__inner">
+            <div class="shipping-note__title">Spedizione e resi</div>
+            <div class="shipping-note__text">€5,90 sotto €60 — gratuita sopra €60. Reso entro 14 giorni su prodotto integro e non utilizzato.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="finder">
+      <div class="container">
+        <div class="finder" data-reveal>
+          <div class="finder__copy">
+            <h2 class="section__title">Trova la tua fragranza</h2>
+            <p class="section__sub">Tre domande, un consiglio chiaro. In pochi secondi sei su Butter o Berry.</p>
+
+            <div class="finder__q">
+              <div class="finder__label">Umore</div>
+              <div class="seg" role="group" aria-label="Scegli mood">
+                <button class="seg__btn is-active" type="button" data-f-mood="calm" aria-pressed="true">Rilassato</button>
+                <button class="seg__btn" type="button" data-f-mood="bold" aria-pressed="false">Deciso</button>
+              </div>
+            </div>
+
+            <div class="finder__q">
+              <div class="finder__label">Momento</div>
+              <div class="seg" role="group" aria-label="Scegli ambiente">
+                <button class="seg__btn is-active" type="button" data-f-space="home" aria-pressed="true">Casa</button>
+                <button class="seg__btn" type="button" data-f-space="night" aria-pressed="false">Sera</button>
+              </div>
+            </div>
+
+            <div class="finder__q">
+              <div class="finder__label">Temperatura</div>
+              <div class="seg" role="group" aria-label="Scegli preferenza">
+                <button class="seg__btn is-active" type="button" data-f-pref="warm" aria-pressed="true">Caldo</button>
+                <button class="seg__btn" type="button" data-f-pref="cold" aria-pressed="false">Freddo</button>
+              </div>
+            </div>
+
+            <div class="finder__result" aria-live="polite">
+              <div class="finder__badge">Consiglio</div>
+              <div class="finder__name" data-f-result-name>Butter</div>
+              <div class="finder__desc" data-f-result-desc></div>
+              <div class="finder__actions">
+                <button class="btn btn--primary" type="button" data-f-open>Vedi dettagli</button>
+                <button class="btn btn--soft" type="button" data-f-add>Aggiungi al carrello</button>
+              </div>
+            </div>
+          </div>
+
+	          <div class="finder__visual" aria-hidden="true">
+	            <div class="finder__media media-stack">
+	              <img class="media-img" data-f-img data-asset="butter_1" alt="">
+	            </div>
+	            <div class="finder__hint">Consiglio rapido: Butter per il comfort pulito. Berry per una presenza più scura e resinosa.</div>
+	          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="container story">
+        <div class="story__card" data-reveal>
+          <h2 class="section__title">Made in Italy</h2>
+          <p class="section__sub">
+            SmokyCandle nasce in Italia: cera di soia, colata a mano e una sola ossessione — un profumo pulito e riconoscibile. Pochi elementi, lavorati bene.
+          </p>
+
+          <div class="story__grid">
+            <div class="story__item">
+              <div class="story__label">Cera di soia</div>
+              <div class="story__text">Bruciatura più controllata e resa uniforme. Lavoriamo a piccoli lotti per garantire consistenza.</div>
+            </div>
+            <div class="story__item">
+              <div class="story__label">Fragranze</div>
+              <div class="story__text">Selezione mirata: Butter è morbida e legnosa; Berry è scura e resinosa. Due firme, nessuna confusione.</div>
+            </div>
+            <div class="story__item">
+              <div class="story__label">Rituale</div>
+              <div class="story__text">Ogni candela rende al meglio con sessioni da 2–3 ore e stoppino sempre rifinito.</div>
+            </div>
+          </div>
+
+          <div class="story__cta">
+            <button class="btn btn--primary" type="button" data-scrollto="shop">Vai allo shop</button>
+            <button class="btn btn--ghost" type="button" data-open-guide>Guida all’uso</button>
+          </div>
+        </div>
+
+        <div class="story__aside" aria-hidden="true" data-reveal>
+          <div class="material-slab">
+            <div class="material-slab__top"></div>
+            <div class="material-slab__label">Texture: clay / slate / ash</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <div>
+            <h2 class="section__title">Recensioni</h2>
+            <p class="section__sub">Recensioni d’esempio per mostrare l’esperienza. Quando le colleghi a dati reali, la UI è pronta.</p>
+          </div>
+        </div>
+
+        <div class="reviews" data-reveal>
+          <article class="review">
+            <div class="review__top">
+              <div class="stars" aria-label="Valutazione 5 su 5">★★★★★</div>
+              <div class="review__pill">Butter</div>
+            </div>
+            <p class="review__text">“Butter ha un profumo elegante, non invadente. Brucia in modo uniforme e l’ambiente resta pulito.”</p>
+            <div class="review__by">— Martina, Milano</div>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <div class="stars" aria-label="Valutazione 5 su 5">★★★★★</div>
+              <div class="review__pill">Berry</div>
+            </div>
+            <p class="review__text">“Berry è profonda e resinosa: perfetta la sera. Persistente, ma mai stucchevole.”</p>
+            <div class="review__by">— Luca, Amsterdam</div>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <div class="stars" aria-label="Valutazione 5 su 5">★★★★★</div>
+              <div class="review__pill">Set</div>
+            </div>
+            <p class="review__text">“Due caratteri netti: Butter più morbida, Berry più intensa. Made in Italy fatto bene, si percepisce.”</p>
+            <div class="review__by">— Sara, Bologna</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <div>
+            <h2 class="section__title">FAQ</h2>
+            <p class="section__sub">Risposte essenziali. Come lavoriamo e come usarle al meglio.</p>
+          </div>
+        </div>
+
+        <div class="accordion" data-reveal>
+          <details class="acc">
+            <summary class="acc__sum">Quanto dura una candela di soia?</summary>
+            <div class="acc__body">In media circa 45 ore. Per una resa ottimale consigliamo sessioni da 2–3 ore.</div>
+          </details>
+          <details class="acc">
+            <summary class="acc__sum">Come evito il tunneling (foro al centro)?</summary>
+            <div class="acc__body">Prima accensione: lascia che la piscina arrivi ai bordi. Taglia lo stoppino a 4–6mm prima di ogni uso.</div>
+          </details>
+          <details class="acc">
+            <summary class="acc__sum">Posso fare un reso o un cambio?</summary>
+            <div class="acc__body">Sì, entro 14 giorni su prodotto integro e non utilizzato. Per assistenza contattaci (policy da collegare).</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand" data-reveal>
+          <a class="brand brand--mark-only footer__logo" href="#top" aria-label="SmokyCandle">
+            <span class="brand__mark" aria-hidden="true">
+              <img class="brand__logo" data-asset="logo" alt="SmokyCandle">
+            </span>
+          </a>
+          <p class="footer__note">Candele di soia artigianali, colate a mano in Italia. Due fragranze signature, una sola firma.</p>
+        </div>
+
+        <div class="footer__cols" data-reveal>
+          <div class="footer__col">
+            <div class="footer__title">Prodotti</div>
+            <a class="footer__link" href="#shop" data-scrollto="shop">Prodotti</a>
+            <a class="footer__link" href="#" data-open-guide>Guida all’uso</a>
+            <a class="footer__link" href="#faq" data-scrollto="faq">FAQ</a>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Brand</div>
+            <a class="footer__link" href="#story" data-scrollto="story">Storia</a>
+            <a class="footer__link" href="#finder" data-scrollto="finder">Trova la fragranza</a>
+            <a class="footer__link" href="#" data-legal>Privacy / Cookies</a>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Newsletter</div>
+            <form class="nl" data-nl>
+              <label class="sr-only" for="nlEmail">Email</label>
+              <input id="nlEmail" class="nl__input" type="email" placeholder="email@esempio.com" autocomplete="email" required />
+              <button class="btn btn--primary nl__btn" type="submit">Iscriviti</button>
+            </form>
+            <div class="footer__fineprint">Ricevi anteprime, piccoli lotti e restock. Niente spam.</div>
+          </div>
+        </div>
+
+        <div class="footer__bottom" data-reveal>
+          <span>© <span data-year></span> SmokyCandle</span>
+          <span class="footer__sep" aria-hidden="true">·</span>
+          <span>Pagamenti: carta / wallet (in arrivo)</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <div class="overlay" data-overlay hidden></div>
+
+  <aside class="drawer" role="dialog" aria-modal="true" aria-label="Carrello" data-cart-drawer hidden>
+    <div class="drawer__head">
+      <div class="drawer__title">Carrello</div>
+      <button class="icon-btn" type="button" aria-label="Chiudi carrello" data-cart-close>
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+      </button>
+    </div>
+
+    <div class="drawer__body">
+      <div class="freebar" data-freebar>
+        <div class="freebar__top">
+          <span class="freebar__label">Spedizione gratuita</span>
+          <span class="freebar__value" data-freebar-text>—</span>
+        </div>
+        <div class="freebar__track" aria-hidden="true">
+          <div class="freebar__fill" data-freebar-fill style="width:0%"></div>
+        </div>
+      </div>
+
+      <div class="cart" data-cart-items></div>
+
+	      <div class="cross" data-cross hidden>
+	        <div class="cross__title">Completa il set</div>
+	        <div class="cross__card">
+	          <div class="cross__media media-stack">
+	            <img class="media-img" data-cross-img data-asset="butter_1" alt="">
+	          </div>
+	          <div class="cross__info">
+	            <div class="cross__name" data-cross-name>—</div>
+	            <div class="cross__meta" data-cross-meta>—</div>
+	            <div class="cross__row">
+              <div class="cross__price" data-cross-price>—</div>
+              <button class="btn btn--primary btn--sm" type="button" data-cross-add>Aggiungi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart__summary" aria-live="polite">
+        <div class="row"><span>Subtotale</span><span data-subtotal>€0</span></div>
+        <div class="row"><span>Spedizione</span><span data-shipping>€0</span></div>
+        <div class="row"><span>IVA (stima)</span><span data-tax>€0</span></div>
+        <div class="row row--total"><span>Totale</span><span data-total>€0</span></div>
+
+        <div class="cart__actions">
+          <button class="btn btn--primary" type="button" data-checkout>Procedi</button>
+          <button class="btn btn--ghost" type="button" data-cart-clear>Svuota</button>
+        </div>
+
+        <div class="cart__hint" data-cart-hint></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Dettagli prodotto" data-product-modal hidden>
+    <div class="modal__card" role="document">
+      <div class="modal__head">
+        <div class="modal__title" data-p-title>Prodotto</div>
+        <button class="icon-btn" type="button" aria-label="Chiudi" data-product-close>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </button>
+      </div>
+
+	      <div class="modal__body">
+	        <div class="pdp">
+	          <div class="pdp__gallery">
+	            <div class="pdp__media media-stack">
+	              <img class="pdp__img" data-p-img data-asset="butter_1" alt="">
+	            </div>
+	            <div class="pdp__thumbs" data-p-thumbs aria-label="Galleria immagini prodotto"></div>
+	          </div>
+
+          <div class="pdp__info">
+            <p class="pdp__tag" data-p-tag>Collezione Signature</p>
+            <p class="pdp__desc" data-p-desc></p>
+
+            <div class="pdp__specs">
+              <div class="spec"><div class="spec__k">Peso</div><div class="spec__v" data-p-weight>—</div></div>
+              <div class="spec"><div class="spec__k">Durata</div><div class="spec__v" data-p-burn>—</div></div>
+              <div class="spec"><div class="spec__k">Note</div><div class="spec__v" data-p-notes>—</div></div>
+            </div>
+
+            <div class="pdp__buy">
+              <div class="pdp__price" data-p-price>€0</div>
+              <div class="pdp__qty">
+                <button class="qty-btn" type="button" aria-label="Diminuisci quantità" data-p-qty-dec>−</button>
+                <input class="qty-input" type="number" inputmode="numeric" min="1" value="1" aria-label="Quantità" data-p-qty />
+                <button class="qty-btn" type="button" aria-label="Aumenta quantità" data-p-qty-inc>+</button>
+              </div>
+              <button class="btn btn--primary pdp__add" type="button" data-p-add>Aggiungi al carrello</button>
+            </div>
+
+            <div class="pdp__fine">
+              <span class="dot"></span>
+              <span>Finiture curate — etichetta opaca, vetro satinato</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Riepilogo ordine" data-checkout-modal hidden>
+    <div class="modal__card modal__card--checkout" role="document">
+      <div class="modal__head">
+        <div class="modal__title">Riepilogo ordine</div>
+        <button class="icon-btn" type="button" aria-label="Chiudi riepilogo ordine" data-checkout-close>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="modal__body">
+        <div class="checkout">
+          <form class="checkout__form" data-checkout-form>
+            <div class="form__section">
+              <h3 class="form__title">Contatti</h3>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="email@esempio.com" />
+              </div>
+            </div>
+
+            <div class="form__section">
+              <h3 class="form__title">Spedizione</h3>
+              <div class="grid2">
+                <div class="field"><label for="firstName">Nome</label><input id="firstName" name="firstName" autocomplete="given-name" required /></div>
+                <div class="field"><label for="lastName">Cognome</label><input id="lastName" name="lastName" autocomplete="family-name" required /></div>
+              </div>
+
+              <div class="field"><label for="address">Indirizzo</label><input id="address" name="address" autocomplete="street-address" required /></div>
+
+              <div class="grid3">
+                <div class="field"><label for="zip">CAP</label><input id="zip" name="zip" autocomplete="postal-code" required /></div>
+                <div class="field"><label for="city">Città</label><input id="city" name="city" autocomplete="address-level2" required /></div>
+                <div class="field">
+                  <label for="country">Paese</label>
+                  <select id="country" name="country" required data-country>
+                    <option value="IT">Italia</option>
+                    <option value="NL">Paesi Bassi</option>
+                    <option value="CH">Svizzera</option>
+                    <option value="DE">Germania</option>
+                    <option value="FR">Francia</option>
+                    <option value="ES">Spagna</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__section">
+              <h3 class="form__title">Pagamento (in arrivo)</h3>
+              <div class="field"><label for="card">Numero carta</label><input id="card" name="card" inputmode="numeric" placeholder="1234 5678 9012 3456" required /></div>
+              <div class="grid3">
+                <div class="field"><label for="exp">Scadenza</label><input id="exp" name="exp" placeholder="MM/AA" required /></div>
+                <div class="field"><label for="cvc">CVC</label><input id="cvc" name="cvc" inputmode="numeric" placeholder="123" required /></div>
+                <div class="field"><label for="nameOnCard">Nome su carta</label><input id="nameOnCard" name="nameOnCard" required /></div>
+              </div>
+
+              <label class="check">
+                <input type="checkbox" name="terms" required />
+                <span>Accetto i termini</span>
+              </label>
+            </div>
+
+            <button class="btn btn--primary btn--full" type="submit">Completa ordine</button>
+            <p class="small-muted">Demo: non verrà effettuato alcun addebito.</p>
+          </form>
+
+          <aside class="checkout__summary" aria-live="polite">
+            <div class="summary-card">
+              <div class="summary-card__title">Riepilogo</div>
+              <div class="summary-lines" data-checkout-lines></div>
+
+              <div class="summary-totals">
+                <div class="row"><span>Subtotale</span><span data-co-subtotal>€0</span></div>
+                <div class="row"><span>Spedizione</span><span data-co-shipping>€0</span></div>
+                <div class="row"><span>IVA (stima)</span><span data-co-tax>€0</span></div>
+                <div class="row row--total"><span>Totale</span><span data-co-total>€0</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Guida all’uso" data-guide-modal hidden>
+    <div class="modal__card" role="document">
+      <div class="modal__head">
+        <div class="modal__title">Come usarla al meglio</div>
+        <button class="icon-btn" type="button" aria-label="Chiudi guida" data-guide-close>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </button>
+      </div>
+      <div class="modal__body">
+        <div class="guide">
+          <ol class="guide__list">
+            <li><strong>Prima accensione:</strong> lascia che la piscina arrivi ai bordi (2–3 ore).</li>
+            <li><strong>Stoppino:</strong> taglia a 4–6mm prima di ogni utilizzo.</li>
+            <li><strong>Ambiente:</strong> evita correnti d’aria per una bruciatura più uniforme.</li>
+            <li><strong>Sicurezza:</strong> non lasciare incustodita.</li>
+          </ol>
+          <p class="small-muted">Sessioni corrette = meno tunneling = resa migliore.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
