@@ -1067,28 +1067,54 @@
 	  /* =========================
 	   * Hero slider (hero_1..hero_7)
 	   * ========================= */
-  function initHeroSlider() {
-    const wrap = document.querySelector("[data-hero]");
-    if (!wrap) return;
+	  function initHeroSlider() {
+	    const wrap = document.querySelector("[data-hero]");
+	    if (!wrap) return;
 
-    const slides = Array.from(wrap.querySelectorAll("[data-hero-slide]"));
-    if (slides.length <= 1) return;
+	    const slides = Array.from(wrap.querySelectorAll("[data-hero-slide]"));
+	    if (slides.length <= 1) return;
 
-    const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
-      slides.forEach((s, i) => s.classList.toggle("is-active", i === 0));
-      return;
-    }
+	    let idx = 0;
+	    const mqReduce = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
+	    let timer = 0;
 
-    let idx = 0;
-    const intervalMs = 3800; // ~3.8s: in range 3/4 secondi
+	    const getIntervalMs = () => (mqReduce && mqReduce.matches ? 6500 : 3800);
 
-    window.setInterval(() => {
-      slides[idx].classList.remove("is-active");
-      idx = (idx + 1) % slides.length;
-      slides[idx].classList.add("is-active");
-    }, intervalMs);
-  }
+	    const setActive = (nextIdx) => {
+	      slides.forEach((s, i) => s.classList.toggle("is-active", i === nextIdx));
+	    };
+
+	    const stop = () => {
+	      if (!timer) return;
+	      window.clearTimeout(timer);
+	      timer = 0;
+	    };
+
+	    const tick = () => {
+	      timer = 0;
+	      idx = (idx + 1) % slides.length;
+	      setActive(idx);
+	      if (document.visibilityState !== "hidden") timer = window.setTimeout(tick, getIntervalMs());
+	    };
+
+	    setActive(0);
+	    timer = window.setTimeout(tick, getIntervalMs());
+
+	    document.addEventListener("visibilitychange", () => {
+	      if (document.visibilityState === "hidden") return stop();
+	      if (!timer) timer = window.setTimeout(tick, getIntervalMs());
+	    });
+
+	    if (mqReduce) {
+	      const onReduceChange = () => {
+	        if (document.visibilityState === "hidden") return;
+	        stop();
+	        timer = window.setTimeout(tick, getIntervalMs());
+	      };
+	      if (typeof mqReduce.addEventListener === "function") mqReduce.addEventListener("change", onReduceChange);
+	      else if (typeof mqReduce.addListener === "function") mqReduce.addListener(onReduceChange);
+	    }
+	  }
 function initReveal() {
     const nodes = $$("[data-reveal]");
     if (!("IntersectionObserver" in window) || nodes.length === 0) {
